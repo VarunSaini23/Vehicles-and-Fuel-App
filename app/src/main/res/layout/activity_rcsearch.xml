@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="90dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <com.github.florent37.materialtextfield.MaterialTextField
+            android:layout_width="match_parent"
+            android:layout_marginBottom="48dp"
+            android:layout_height="wrap_content"
+            app:mtf_image="@drawable/ic_vehicle"
+            app:mtf_labelColor="@color/colorAccent"
+            app:mtf_backgroundColor="@color/bb_darkBackgroundColor"
+            app:mtf_openKeyboardOnFocus="true"
+            >
+
+            <EditText
+                android:hint="Registration Number"
+                android:textColorHint="#808080"
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"/>
+
+        </com.github.florent37.materialtextfield.MaterialTextField>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent"/>
+
+
+        <RelativeLayout
+            android:paddingTop="48dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+
+                android:id="@+id/imageCaptcha"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:scaleType="fitXY"
+                android:padding="8dp"
+                android:adjustViewBounds="true"/>
+
+            <ProgressBar
+                android:id="@+id/progressBarCaptcha"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="visible"/>
+
+            <com.github.florent37.materialtextfield.MaterialTextField
+                android:id="@+id/materialTextFieldCaptcha"
+                android:layout_width="match_parent"
+                android:layout_below="@id/imageCaptcha"
+                android:layout_height="wrap_content"
+                app:mtf_image="@drawable/ic_vehicle"
+                app:mtf_labelColor="@color/colorAccent"
+                app:mtf_backgroundColor="@color/bb_darkBackgroundColor"
+                app:mtf_openKeyboardOnFocus="true"
+                android:visibility="gone"
+                >
+
+                <EditText
+                    android:hint="Captcha"
+                    android:textColorHint="#808080"
+                    android:id="@+id/editTextCaptcha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"/>
+
+            </com.github.florent37.materialtextfield.MaterialTextField>
+
+        </RelativeLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:src="@drawable/ic_arrow_forward"
+            android:layout_margin="16dp" />
+
+    </LinearLayout>
+
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        app:bb_tabXmlResource="@xml/bottombar_tabs"
+        app:bb_behavior="underNavbar"/>
+
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_vehicle"
+        icon="@drawable/ic_vehicle"
+        title="Vehicle"
+        barColorWhenSelected="#FFDE03"/>
+    <tab
+        id="@+id/tab_recent"
+        icon="@drawable/ic_recent"
+        title="Recent"
+        barColorWhenSelected="#76FF03"/>
+    <tab
+        id="@+id/tab_favorite"
+        icon="@drawable/ic_favorite"
+        title="Friends"
+        barColorWhenSelected="#FF4081"/>
+
+    <tab
+        id="@+id/tab_user"
+        icon="@drawable/ic_user"
+        title="User"
+        barColorWhenSelected="#333333"/>
+
+</tabs>
